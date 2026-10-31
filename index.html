@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b19">
+<title>SOMNIA AI — مختبر الاحتمالات</title>
+<style>
+:root{--bg:#080b19;--panel:#10162a;--panel2:#151d36;--line:#26345c;--text:#f3f6ff;--muted:#aab5d4;--blue:#58d8ff;--violet:#9b7cff;--green:#54e3ad;--orange:#ffbd69}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#20295b 0%,var(--bg) 54%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:1050px;margin:auto;padding:20px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;font-size:25px;background:linear-gradient(135deg,#5a4aff,#27d5ff);box-shadow:0 0 28px #4b69ff55}.brand h1{margin:0;font-size:22px;letter-spacing:2px}.brand p{margin:3px 0 0;color:var(--muted);font-size:12px}.tag{border:1px solid #354574;border-radius:999px;padding:8px 12px;color:#c7d4ff;font-size:12px}
+.hero{text-align:center;padding:20px 0 28px}.hero h2{font-size:clamp(28px,5vw,46px);line-height:1.25;margin:0 0 12px}.glow{background:linear-gradient(90deg,var(--blue),#bba1ff);color:transparent;background-clip:text}.hero p{color:var(--muted);max-width:650px;margin:0 auto;line-height:1.9}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:linear-gradient(155deg,#131b33ed,#0c1123f2);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 12px 35px #0002}.panel h3{margin:0 0 16px;font-size:17px}.field{margin-bottom:15px}.field label{display:block;color:#d9e2ff;font-size:13px;margin-bottom:8px}.field input,.field select,.field textarea{width:100%;background:#090e20;color:var(--text);border:1px solid #34436d;border-radius:12px;padding:13px;font:inherit;outline:none}.field textarea{min-height:105px;resize:vertical;line-height:1.7}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #58d8ff18}.hint{font-size:12px;color:var(--muted);line-height:1.7}.btn{border:0;border-radius:13px;padding:13px 18px;font:inherit;font-weight:700;cursor:pointer;color:#071020;background:linear-gradient(100deg,var(--blue),#9b8cff);width:100%;box-shadow:0 8px 25px #4f92ff24}.btn:active{transform:scale(.99)}.btn.secondary{background:#1a2442;color:#e8eeff;border:1px solid #354574;box-shadow:none;margin-top:10px}.examples{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}.chip{background:#151f3b;border:1px solid #2e3e69;color:#c8d9ff;border-radius:999px;padding:7px 10px;font-size:12px;cursor:pointer}.results{margin-top:18px;display:none}.results.show{display:block}.results h3{margin-bottom:12px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.future{border:1px solid var(--line);border-radius:17px;padding:15px;background:#0b1124}.future .symbol{font-size:22px}.future h4{margin:9px 0 8px}.future p{color:#c0cbe8;line-height:1.75;font-size:13px;margin:0}.future.green{border-color:#246d60}.future.gold{border-color:#77613c}.future.purple{border-color:#514481}.future .label{display:inline-block;font-size:11px;border-radius:999px;padding:4px 8px;margin-bottom:7px;background:#1a2941;color:#bdeeff}.note{margin-top:14px;padding:13px;border-radius:13px;background:#151b30;border:1px solid #303b60;color:#c2cbe4;font-size:12px;line-height:1.8}.footer{text-align:center;color:#7885a9;font-size:12px;padding:22px 0}.smalltitle{color:var(--blue);font-size:12px;letter-spacing:1px;margin-bottom:8px}.progress{height:5px;background:#1d2744;border-radius:9px;overflow:hidden;margin:16px 0}.progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--blue),var(--violet));transition:width .5s}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.wrap{padding:14px}.panel{padding:16px}.hero{padding-top:8px}.top{margin-bottom:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><div class="logo">∞</div><div><h1>SOMNIA</h1><p>مختبر الاحتمالات المستقبلية</p></div></div>
+ <div class="tag">SOMNIA AI · تحليل ذكي</div>
+</header>
+<section class="hero">
+ <div class="smalltitle">EXPLORE WHAT COULD HAPPEN</div>
+ <h2>ماذا سيحدث <span class="glow">لو...؟</span></h2>
+ <p>اكتب قرارًا أو سيناريو، ودع الذكاء الاصطناعي يحلّل العوامل والافتراضات والمسارات المحتملة، مع توضيح ما نعرفه وما لا يمكن الجزم به.</p>
+</section>
+<div class="grid">
+ <section class="panel">
+  <h3>✦ ابنِ سيناريوك</h3>
+  <div class="field"><label for="kind">نوع المحاكاة</label><select id="kind"><option value="personal">مستقبلي الشخصي — دراسة، عمل، مشروع، مال</option><option value="world">مستقبل العالم — اقتصاد، بيئة، مجتمع، أحداث افتراضية</option></select></div>
+  <div class="field"><label for="scenario">ماذا تريد أن تختبر؟</label><textarea id="scenario" placeholder="مثال: ماذا لو خصصت ساعة يوميًا لمدة 6 أشهر لتعلم البرمجة؟"></textarea><div class="examples"><button class="chip" data-fill="ماذا لو خصصت ساعة يوميًا لمدة 6 أشهر لتعلم البرمجة؟">تعلم البرمجة</button><button class="chip" data-fill="ماذا لو بدأت مشروعًا صغيرًا بميزانية محدودة؟">مشروع صغير</button><button class="chip" data-fill="ماذا لو انخفضت الأمطار في بلد ما لثلاث سنوات؟" data-kind="world">الجفاف لثلاث سنوات</button></div></div>
+  <div class="field"><label for="context">تفاصيل تغيّر النتيجة (اختياري)</label><input id="context" placeholder="مثل: الوقت المتاح، الميزانية، البلد، الظروف الحالية"></div>
+  <button class="btn" id="run">محاكاة الاحتمالات ←</button>
+  <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+  <div class="hint">يتطلب التحليل الذكي تشغيل الخادم وإعداد مفتاح API. لا يستطيع أي نموذج ضمان معرفة المستقبل بنسبة 100%.</div>
+ </section>
+ <section class="panel">
+  <h3>◈ طريقة عمل SOMNIA</h3>
+  <div class="future purple" style="margin-bottom:10px"><span class="label">01 · السيناريو</span><h4>نحدّد ما الذي قد يتغير</h4><p>القرار، والظروف المحيطة به، والافتراضات التي نعتمد عليها.</p></div>
+  <div class="future gold" style="margin-bottom:10px"><span class="label">02 · المسارات</span><h4>نقارن أكثر من احتمال</h4><p>مسار إيجابي، ومسار صعب، ومسار متوازن؛ لا نتيجة واحدة مزعومة.</p></div>
+  <div class="future green"><span class="label">03 · قرار أوضح</span><h4>نبحث عن الخطوة التالية</h4><p>نحدد ما يمكن اختباره بأمان الآن وما المعلومات الناقصة.</p></div>
+ </section>
+</div>
+<section class="panel results" id="results" aria-live="polite">
+ <div class="smalltitle">AI SCENARIO ANALYSIS</div><h3>تحليل السيناريو والمسارات المحتملة</h3>
+ <div class="cards" id="cards"></div>
+ <div class="note" id="next"></div>
+ <button class="btn secondary" id="revise">تعديل السيناريو وإعادة المحاولة</button>
+</section>
+<div class="note"><strong>مبدأ SOMNIA:</strong> لا يمكن معرفة مستقبل البشر أو الأحداث بنسبة 100%. هدفنا هو بناء أداة تساعد على التفكير عبر سيناريوهات واضحة، وافتراضات معلنة، ومقارنة النتائج الفعلية بالتوقعات لاحقًا.</div>
+<footer class="footer">SOMNIA AI · نموذج أولي · أرسل فقط المعلومات التي ترتاح لمشاركتها مع خدمة الذكاء الاصطناعي.</footer>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{ $('scenario').value=b.dataset.fill; if(b.dataset.kind)$('kind').value=b.dataset.kind; $('scenario').focus();}));
+$('run').addEventListener('click', async ()=>{
+ const scenario=$('scenario').value.trim();
+ if(!scenario){$('scenario').focus();$('scenario').placeholder='اكتب سيناريو أولًا، مثل: ماذا لو...؟';return;}
+ const kind=$('kind').value, context=$('context').value.trim();
+ const button=$('run'), bar=$('bar');
+ button.textContent='الذكاء الاصطناعي يدرس السيناريو…'; button.disabled=true; bar.style.width='35%';
+ $('results').classList.add('show');
+ $('cards').innerHTML='<article class="future purple"><div class="symbol">⏳</div><h4>جارٍ التحليل</h4><p>نحلل الافتراضات والعوامل والمسارات المحتملة. قد يستغرق ذلك بعض الوقت.</p></article>';
+ $('next').textContent='يرجى الانتظار…';
+ try {
+  const response = await fetch('/api/analyze', {
+   method:'POST', headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({scenario, kind, context})
+  });
+  const data = await response.json().catch(()=>({}));
+  if(!response.ok) throw new Error(data.error || 'تعذّر الاتصال بخدمة الذكاء الاصطناعي.');
+  const analysis = data.analysis;
+  if(!analysis || !Array.isArray(analysis.paths) || analysis.paths.length < 1) throw new Error('وصل رد غير مكتمل من نموذج الذكاء الاصطناعي.');
+  $('cards').innerHTML=analysis.paths.slice(0,4).map((p,i)=>{
+   const cls=['green','gold','purple','gold'][i];
+   return `<article class="future ${cls}"><div class="symbol">${['↗','◇','↻','◎'][i]}</div><span class="label">${escapeHtml(p.type||'مسار محتمل')}</span><h4>${escapeHtml(p.title||'سيناريو')}</h4><p>${escapeHtml(p.description||'')}</p>${p.conditions?`<p style="margin-top:9px;color:#a9dfff"><strong>يعتمد على:</strong> ${escapeHtml(p.conditions)}</p>`:''}</article>`;
+  }).join('');
+  const factors=Array.isArray(analysis.key_factors)?analysis.key_factors:[];
+  const questions=Array.isArray(analysis.questions_to_check)?analysis.questions_to_check:[];
+  $('next').innerHTML=`<strong>ملخص التحليل:</strong> ${escapeHtml(analysis.summary||'')}<br><br><strong>العوامل الأكثر تأثيرًا:</strong> ${factors.map(escapeHtml).join(' · ')||'لم تُحدد'}<br><br><strong>ما الذي ينبغي التحقق منه؟</strong> ${questions.map(escapeHtml).join(' · ')||'اجمع معلومات إضافية قبل القرار.'}<br><br><strong>مستوى الثقة:</strong> ${escapeHtml(analysis.confidence||'غير محدد')}<br><br><strong>حدود التحليل:</strong> هذه احتمالات مشروطة وليست معرفة مؤكدة بالمستقبل. لا تعتمد على المحاكاة وحدها في القرارات الطبية أو القانونية أو المالية الكبيرة.`;
+  bar.style.width='100%';
+ } catch(err) {
+  $('cards').innerHTML=`<article class="future purple"><div class="symbol">!</div><h4>لم يكتمل التحليل الذكي</h4><p>${escapeHtml(err.message)}<br><br>تأكد من تشغيل الخادم وإعداد OPENAI_API_KEY. راجع ملف README داخل حزمة المشروع.</p></article>`;
+  $('next').textContent='لم نستخدم محاكاة ثابتة بديلة حتى لا نوهمك بأن تحليل الذكاء الاصطناعي قد تم.';
+  bar.style.width='0%';
+ } finally {
+  button.textContent='إعادة تحليل السيناريو ←'; button.disabled=false;
+  $('results').scrollIntoView({behavior:'smooth',block:'start'});
+ }
+});
+function escapeHtml(value){
+ return String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+$('revise').addEventListener('click',()=>{$('scenario').focus();window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
